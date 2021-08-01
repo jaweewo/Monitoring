@@ -24,15 +24,6 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 ---
-name: Docker Image CI
-
-on:
-  push:
-    branches: [ swarm ]
-  pull_request:
-    branches: [ swarm ]
-
-jobs:
   build-prometheus:
 
     runs-on: ubuntu-latest
