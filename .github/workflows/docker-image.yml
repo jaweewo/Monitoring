@@ -23,7 +23,7 @@ jobs:
         dockerfile:  /Builds/Grafana/Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
----
+
   build-prometheus:
 
     runs-on: ubuntu-latest
