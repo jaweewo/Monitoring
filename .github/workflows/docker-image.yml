@@ -8,21 +8,21 @@ on:
 
 jobs:
 
-  build-grafana:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Docker Build & Push Action
-      uses: mr-smithers-excellent/docker-build-push@v5.5
-      with:
-        image: jaweewo/grafana
-        tags: local
-        registry: docker.io
-        dockerfile:  /Builds/Grafana/Dockerfile
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+ #build-grafana:
+#
+ #  runs-on: ubuntu-latest
+#
+ #  steps:
+ #  - uses: actions/checkout@v2
+ #  - name: Docker Build & Push Action
+ #    uses: mr-smithers-excellent/docker-build-push@v5.5
+ #    with:
+ #      image: jaweewo/grafana
+ #      tags: local
+ #      registry: docker.io
+ #      dockerfile:  /Builds/Grafana/Dockerfile
+ #      username: ${{ secrets.DOCKER_USERNAME }}
+ #      password: ${{ secrets.DOCKER_PASSWORD }}
 
   build-prometheus:
 
@@ -36,7 +36,7 @@ jobs:
         image: jaweewo/prometheus
         tags: local
         registry: docker.io
-        dockerfile:  /Builds/Prometheus/Dockerfile
+        dockerfile:  Builds/Prometheus/Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
