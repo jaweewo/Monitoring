@@ -26,9 +26,8 @@ jobs:
         # Target Docker registry
         registry: docker.io
         # Location of Dockerfile, if not Dockerfile in root directory
-        dockerfile: # optional, default is Dockerfile
-        # Directory to run `docker build` from, if not project root
-        directory: Builds/Grafana
+        dockerfile:  Builds/Grafana/Dockerfile
+        
         # Docker registry username
         username: ${{ secrets.DOCKER_USERNAME }}
         # Docker registry password
