@@ -36,7 +36,7 @@ jobs:
         image: jaweewo/prometheus
         tags: local
         registry: docker.io
-        dockerfile:  Builds/Prometheus/Dockerfile
+        dockerfile:  ./Builds/Prometheus/Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
