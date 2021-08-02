@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }} && docker build ./Builds/Prometheus --file Dockerfile --tag jaweewo/prometheus:$(date +%s)
+      run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }} && docker build Builds/Prometheus/Dockerfile --tag jaweewo/prometheus:$(date +%s)
       
       
