@@ -8,7 +8,7 @@ on:
 
 jobs:
 
-  build prometheus:
+  prometheus:
 
     runs-on: ubuntu-latest
 
